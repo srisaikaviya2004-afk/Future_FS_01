@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kaviya | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">Kaviya</div>
+
+    <nav>
+        <a onclick="scrollToSection('home')">Home</a>
+        <a onclick="scrollToSection('about')">About</a>
+        <a onclick="scrollToSection('projects')">Projects</a>
+        <a onclick="scrollToSection('contact')">Contact</a>
+    </nav>
+
+    <button id="themeToggle" class="theme-btn">🌙</button>
+</header>
+
+<!-- HOME (ONLY FULL SCREEN SECTION) -->
+<section id="home" class="hero fade">
+    <h1 id="typing"></h1>
+    <p>Building modern, intuitive, and scalable web experiences.</p>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section fade">
+    <h2>About Me</h2>
+    <p>
+        I am a B.Tech student and Full Stack Web Development Intern.
+        I focus on building modern, scalable, and visually clean web interfaces.
+    </p>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="section fade">
+    <h2>Projects</h2>
+
+    <div class="project"
+        onclick="openModal(
+        'Personal Portfolio',
+        'Apple-style colorful portfolio using HTML, CSS and JavaScript.'
+    )">
+        <h3>Personal Portfolio</h3>
+        <p>Minimal & animated UI</p>
+    </div>
+
+    <div class="project"
+        onclick="openModal(
+        'Mini E-Commerce UI',
+        'Frontend shopping interface with clean layout and interactions.'
+    )">
+        <h3>Mini E-Commerce UI</h3>
+        <p>Professional shopping experience</p>
+    </div>
+</section>
+
+<!-- CONTACT (NOW CLEARLY SEPARATE) -->
+<section id="contact" class="section fade contact-section">
+    <h2>Contact Me</h2>
+    <p class="contact-text">Let’s connect and build something great.</p>
+
+    <form id="contactForm">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+
+    <p id="success" class="success-msg">Message sent successfully ✔</p>
+</section>
+
+<footer>
+    © 2025 Helix | Full Stack Web Development Intern
+</footer>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">✕</span>
+        <h3 id="modalTitle"></h3>
+        <p id="modalText"></p>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
